@@ -79,3 +79,17 @@ button:hover {
     border-radius: 4px;
     border: 1px solid #ddd;
 }
+
+.form {
+    display: none;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #f1f1f1;
+    position:fixed;
+    width: 10%;
+    bottom: 0;
+}

@@ -3,32 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funkcja sześcienna</title>
+    <title>Funkcja sześcienna i wielomiany</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Funkcja sześcienna</h1>
-        <div class="input-group">
-            <label for="a">a:</label>
-            <input type="number" id="a" step="any">
+        <h1>Wybierz Typ Funkcji</h1>
+        <button onclick="showCubicForm()">Funkcja sześcienna</button>
+        <button onclick="showPolynomialForm()">Wielomian do potęgi 5</button>
+
+        <div id="cubicForm" class="form" style="display: none;">
+            <h1>Funkcja sześcienna</h1>
+            <div class="input-group">
+                <label for="a">a:</label>
+                <input type="number" id="a" step="any">
+            </div>
+            <div class="input-group">
+                <label for="b">b:</label>
+                <input type="number" id="b" step="any">
+            </div>
+            <div class="input-group">
+                <label for="c">c:</label>
+                <input type="number" id="c" step="any">
+            </div>
+            <div class="input-group">
+                <label for="d">d:</label>
+                <input type="number" id="d" step="any">
+            </div>
+            <button onclick="solveCubicEquation()">Rozwiąż</button>
+            <div class="results" id="resultsCubic"></div>
         </div>
-        <div class="input-group">
-            <label for="b">b:</label>
-            <input type="number" id="b" step="any">
+
+        <div id="polynomialForm" class="form" style="display: none;">
+            <h1>Symulator Rozwiązywania Wielomianów do Potęgi 5</h1>
+            <p>Podaj współczynniki wielomianu (od najwyższej do najniższej potęgi):</p>
+            <form>
+                <input type="number" id="a5" placeholder="a5 (x^5)" required>
+                <input type="number" id="a4" placeholder="a4 (x^4)" required>
+                <input type="number" id="a3" placeholder="a3 (x^3)" required>
+                <input type="number" id="a2" placeholder="a2 (x^2)" required>
+                <input type="number" id="a1" placeholder="a1 (x^1)" required>
+                <input type="number" id="a0" placeholder="a0 (constant)" required>
+                <button type="button" onclick="solvePolynomial()">Rozwiąż</button>
+            </form>
+            <div class="results" id="resultsPolynomial"></div>
         </div>
-        <div class="input-group">
-            <label for="c">c:</label>
-            <input type="number" id="c" step="any">
-        </div>
-        <div class="input-group">
-            <label for="d">d:</label>
-            <input type="number" id="d" step="any">
-        </div>
-        <button onclick="solveCubicEquation()">Rozwiąż</button>
-        <div class="results" id="results"></div>
     </div>
     <script src="script.js"></script>
-    
+
+    <footer>
+        <p>&copy; Wykonał Jakub Wasylik <a href="https://github.com/Wasiuu">GitHub</a> </p>
+    </footer>
 </body>
 </html>
